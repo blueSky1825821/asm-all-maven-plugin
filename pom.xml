@@ -54,13 +54,6 @@
             <version>8.0.1</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.67</version>
-            <scope>compile</scope>
-        </dependency>
-
         <!-- slf4j日志通用 -->
         <dependency>
             <groupId>org.slf4j</groupId>
