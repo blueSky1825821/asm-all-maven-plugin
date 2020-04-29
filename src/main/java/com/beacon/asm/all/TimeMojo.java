@@ -1,6 +1,5 @@
 package com.beacon.asm.all;
 
-import com.alibaba.fastjson.JSON;
 import org.apache.maven.model.Resource;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
@@ -102,7 +101,6 @@ public class TimeMojo extends AbstractMojo {
     @Override
     public void execute() throws MojoExecutionException, MojoFailureException {
         getLog().info("#######out" + outputDirectory.getPath());
-        getLog().info("#######include" + JSON.toJSONString(includes));
         getLog().info("#######" + new Class[] { Demo.class }[0].getName());
         try {
             initASM();
