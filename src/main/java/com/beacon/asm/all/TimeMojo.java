@@ -109,11 +109,11 @@ public class TimeMojo extends AbstractMojo {
         }
     }
 
-    private void initASM() throws IOException {
+    protected void initASM() throws IOException {
         //做单元测试使用
-//        needasms = new String[] { "com.beacon.asm.all.Demo" };
-//        outputDirectory = new File(
-//                "/Users/wangmin/Study/code/asm-all-maven-plugin/target/classes");
+        needasms = new String[] { "com.beacon.asm.all.Demo" };
+        outputDirectory = new File(
+                "/Users/wangmin/Study/code/asm-all-maven-plugin/target/classes");
         if (needasms == null || needasms.length == 0) {
             return;
         }

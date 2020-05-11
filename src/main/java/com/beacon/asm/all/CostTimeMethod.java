@@ -3,14 +3,13 @@ package com.beacon.asm.all;
 /**
  * DESCRIPTION:
  * <P>
- *     ASM统计耗时java方法,使用该类生成java字节码
+ * ASM统计耗时java方法,使用该类生成java字节码
  * </p>
  *
  * @author WangMin
  * @since 2020/4/25 10:44 上午
  */
 public class CostTimeMethod {
-
 
     /**
      * 耗时生成的代码
