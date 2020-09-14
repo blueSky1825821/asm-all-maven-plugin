@@ -28,7 +28,22 @@ public class TimeMojoTest {
         demo.test();
     }
 
+    @Test
+    public void testPlus() {
+        plusi();
+        iPlus();
+    }
+
+    @Test
+    public void m() {
+        CostTimeMethod costTimeMethod = new CostTimeMethod();
+        costTimeMethod.test();
+    }
+
+
     public void plusi() {
+        int a = 0;
+        int b = 0;
         for (int j = 0; j < 100; j++) {
             System.out.println(j);
         }
@@ -38,5 +53,11 @@ public class TimeMojoTest {
         for (int i = 0; i < 100; ++i) {
             System.out.println(i);
         }
+    }
+
+    public static void main(String[] args){
+        int i = 0;
+        i = ++i;
+        System.out.println(i);
     }
 }
