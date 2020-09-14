@@ -22,7 +22,7 @@ public class STest {
 //    }
 
     @Test
-    public void test() throws IOException {
+    public void testInitAsm() throws IOException {
         TimeMojo timeMojo = new TimeMojo();
         timeMojo.setAsmPackages(new String[]{"com.souche.danube.beacon"});
         timeMojo.setAsmClasses(new String[]{"com.souche.danube.beacon.asm.Demo", "com.souche.danube.beacon.asm.Demo.java"});

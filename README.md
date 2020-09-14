@@ -1,6 +1,7 @@
 # asm-all-maven-plugin
 ## asm代码生成插件
 - 目前只生成了方法耗时的代码
+- 实际已经使用，完全可以放心使用
 
 ## 1 优点
 - 可以对任意方法进行方法耗时统计,不只是spring管理的对象的方法
@@ -9,6 +10,7 @@
 ## 2 接入指南
 
 ### 2.1 引入pom
+每个需要统计耗时的module都需要在pom.xml引入该配置
 ```
 <build>
   <plugins>
@@ -20,14 +22,17 @@
             <!--         代码编译输出目录           -->
             <outputDirectory>${basedir}/target/classes</outputDirectory>
             <!--        需要统计耗时的类，类中统计耗时的方法上需要加上com.beacon.asm.all.CostTime注解            -->
-            <needasms>
-                <needasm>com.beacon.asm.all.Demo</needasm>
-            </needasms>
+            <asmPackages>
+                <asmPackage>com.beacon.asm.all</asmPackage>
+            </asmPackages>
+            <asmClasses>
+                <asmClass>com.beacon.asm.all.Demo</asmClass>
+            </asmClasses>
         </configuration>
         <executions>
             <execution>
                 <id>package</id>
-                <phase>package</phase>
+                <phase>prepare-package</phase>
                 <goals>
                     <goal>time</goal>
                 </goals>
@@ -39,7 +44,9 @@
 ```
 ### 2.2 生成代码
 ```
-mvn clean package
+mvn clean install -Dmaven.test.skip=true -U
+mvn com.beacon:asm-all-maven-plugin:1.0-SNAPSHOT:time
+查看生成的class文件
 ```
 ### 2.3 示例代码
 ```
