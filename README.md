@@ -27,7 +27,7 @@
         <executions>
             <execution>
                 <id>package</id>
-                <phase>package</phase>
+                <phase>prepare-package</phase>
                 <goals>
                     <goal>time</goal>
                 </goals>
