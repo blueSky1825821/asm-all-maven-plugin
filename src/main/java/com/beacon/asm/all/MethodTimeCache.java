@@ -27,6 +27,6 @@ public class MethodTimeCache {
     public static String getCostTime(String methodName) {
         long start = sStartTime.get(methodName);
         long end = sEndTime.get(methodName);
-        return "method: " + methodName + " main " + (end - start) + " ms";
+        return "method: " + methodName + " cost " + (end - start) + " ms";
     }
 }

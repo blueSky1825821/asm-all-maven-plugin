@@ -24,9 +24,9 @@ public class STest {
     @Test
     public void testInitAsm() throws IOException {
         TimeMojo timeMojo = new TimeMojo();
-        timeMojo.setAsmPackages(new String[]{"com.souche.danube.beacon"});
-        timeMojo.setAsmClasses(new String[]{"com.souche.danube.beacon.asm.Demo", "com.souche.danube.beacon.asm.Demo.java"});
-        timeMojo.setOutputDirectory(new File("/Users/wangmin/Work/code/beacon-asm-maven-plugin/target/classes"));
+        timeMojo.setAsmPackages(new String[]{"com.beacon.asm.all"});
+        timeMojo.setAsmClasses(new String[]{"com.beacon.asm.all.Demo", "com.beacon.asm.all.Demo.java"});
+        timeMojo.setOutputDirectory(new File("/Users/wangmin/Study/code/asm-all-maven-plugin/target/classes"));
         timeMojo.initASM();
     }
 }
